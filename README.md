@@ -1,11 +1,11 @@
-# user-service
+# post-service
 
 ## Description
-A service that can be used to create, edit, get and delete users data.
+A service that can be used to create, edit, get and delete posts data.
 
 ## Dependencies
 It needs to connect to a mongoDB. This can be specified using the "MONGODB_URI" env var.
-It also needs a PORT env variable - defaults to :8010
+It also needs a PORT env variable - defaults to :8011
 
 ## Endpoints
 It needs 3 endpoints
