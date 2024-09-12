@@ -47,6 +47,6 @@ const postSchema = new Schema<IPosts, PostsModel>({
   },
 }, { minimize: false });
 
-const Post = model<IPosts, PostsModel>("Users", postSchema);
+const Post = model<IPosts, PostsModel>("Posts", postSchema);
 
 export { Post };
