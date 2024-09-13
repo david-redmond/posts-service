@@ -11,14 +11,14 @@ COPY package*.json ./
 RUN npm install
 
 ENV MONGODB_URI=""
-ENV PORT=8011
+ENV PORT=8012
 
 # Copy the rest of the application code to the working directory
 COPY . .
 
 RUN npm run build
 
-EXPOSE 8011
+EXPOSE 8012
 # Start the application
 CMD ["node", "./dist/index.js"]
 

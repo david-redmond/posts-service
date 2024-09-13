@@ -1,19 +1,18 @@
-# post-service
+# images-service
 
 ## Description
-A service that can be used to create, edit, get and delete posts data.
+A service that can be used to create, get and delete images.
 
 ## Dependencies
-It needs to connect to a mongoDB. This can be specified using the "MONGODB_URI" env var.
-It also needs a PORT env variable - defaults to :8011
+It needs a PORT env variable - defaults to :8012
+It needs a PUBLIC_URL env variable to make up the public get URL for the images
 
 ## Endpoints
 It needs 3 endpoints
-1) **POST /check** - which returns a user from the database. This is used to verify if the user exists or not.
-2) **POST /** - This is used to create a new user on register.
-3) **GET /** - This is used to return a user.
-4) **PUT /** - This is used to update a user.
-5) **DELETE /** - This is used to delete a user.
+
+1) **POST /** - This is used to upload a new image or an array of images.
+
+2) **DELETE /** - This is used to delete a single image using the filename.
 
 ## Build
 Run `docker build -t <name> .`
