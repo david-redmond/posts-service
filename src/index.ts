@@ -16,7 +16,7 @@ app.use(cors());
 mongoConnection();
 app.get("/", async (req, res) => {
   try {
-    const posts = await Posts.find(); // Fetch all posts from the Posts collection
+    const posts = await Posts.getNewestPosts(); // Fetch all posts from the Posts collection
     if (!!posts) {
       console.debug(`/, GET`);
       return res.status(200).send(posts);
@@ -179,8 +179,7 @@ app.post("/:id/comments", async (req, res) => {
     }
 
     // Create a new comment object
-    const createdOn = new Date().toISOString();
-    const newComment = { creator, text, createdOn };
+    const newComment: any = { creator, text };
 
     // Add the new comment to the post's comments array
     post.comments.push(newComment);
